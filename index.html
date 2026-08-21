@@ -1,56 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anthony Igboalisi | Engineering Portfolio</title>
-    <link rel="icon" type="image/png" href="resources/icon.png">
-    <link rel="stylesheet" href="port_style.css">
-    <meta name="title" content="Anthony Igboalisi | Engineering Portfolio">
-<meta name="description" content="Driven and dedicated student pursuing practical experience in the field of electrical and electronics engineering.">
-
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://akig1019.github.io/">
-<meta property="og:title" content="Anthony Igboalisi | Engineering Portfolio">
-<meta property="og:description" content="Driven and dedicated student pursuing practical experience in the field of electrical and electronics engineering.">
-<meta property="og:image" content="https://akig1019.github.io/resources/linkedin_headshot.jpeg">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anthony Igboalisi |Engineering Portfolio</title>
+  <link rel="stylesheet" href="port_style.css">
+  <!-- Optional Google Fonts for clean sans-serif typography -->
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="hero">
-    <div class="hero-inner hero-grid">
-  <img src="./resources/linkedin_headshot.jpeg" alt="Anthony Igboalisi" class="headshot" />
 
-
-
-  <div>
-    <h1>Anthony Igboalisi</h1>
-    <p> Electrical Engineering Student </p>
-
-    <div class="links">
-      <a href="#technical" class="btn">Electronics Projects & Lab Work</a>
-<a href="#leadership" class="btn">TBA</a>
-      <a href="#resume">Resume</a>
-      <a href="#contact">Contact</a>
-      <a href="https://github.com/akig1019" target="_blank" rel="noreferrer">GitHub</a>
-      <a href="https://www.linkedin.com/in/anthonyigboalisi/" target="_blank" rel="noreferrer">LinkedIn</a>
+  <!-- Top Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-logo">Anthony Igboalisi</div>
+    <nav class="nav-links">
+      <a href="#bio" class="active">Bio</a>
+      <a href="#papers">Papers</a>
+      <a href="#talks">Talks</a>
+      <a href="#news">News</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#teaching">Teaching</a>
+    </nav>
+    <div class="nav-utilities">
+      <span class="icon-search">🔍</span>
+      <span class="icon-theme">🌙</span>
     </div>
-  </div>
-</div>
-
   </header>
 
-  <main class="container">
-    <section id="about" class="card">
-      <h2>About Me</h2>
-      <p>
-        I am an aspiring Electrical Engineering student at Loyola University Maryland <strong>(Expected Graduation: May 2027)</strong> with a strong interest in automation technology, problem-solving, and hands-on engineering projects.
+  <!-- Main Content Container -->
+  <main class="portfolio-container">
+    
+    <!-- Left Sidebar: Profile Details & Social Icons -->
+    <aside class="sidebar">
+      <div class="profile-card">
+        <div class="avatar-container">
+          <!-- Replace with your own image path -->
+          <img src="https://placeholder.com" alt="Profile Picture" class="avatar">
+        </div>
+        <h1 class="profile-name">Chien Shiung Wu</h1>
+        <h2 class="profile-name-native">吳健雄</h2>
+        <p class="profile-title">Chief Scientist</p>
+        <p class="profile-org">OpenAI</p>
+      </div>
+
+      <!-- Social Media & Profiles Bar -->
+      <div class="social-links">
+        <a href="#" title="Email">@</a>
+        <a href="#" title="X / Twitter">𝕏</a>
+        <a href="#" title="Instagram">📸</a>
+        <a href="#" title="LinkedIn">in</a>
+        <a href="#" title="Google Scholar"> Scholar </a>
+        <a href="#" title="ORCID">iD</a>
+      </div>
+    </aside>
+
+    <!-- Right Content Area: Bio & Info Blocks -->
+    <section class="main-content">
+      
+      <!-- About Me Section -->
+      <div class="about-section">
+        <h3 class="section-heading">About Me</h3>
+        <p class="bio-text">
+          I am an aspiring Electrical Engineering student at Loyola University Maryland <strong>(Expected Graduation: May 2027)</strong> with a strong interest in automation technology, problem-solving, and hands-on engineering projects.
           Through rigorous coursework and immersive personal projects, I have been exposed to areas such as electronics, embedded systems, and hardware-software systems.
 I enjoy developing projects that allow me to translate engineering concepts concepts to real-world solutions—whether designing physical prototypes, simulating control systems, or optimizing circuit layouts.
           This portfolio showcases my journey, technical capabilities, and dedication to building reliable, intelligent systems.
-      </p>
+        </p>
+        
+        <!-- CV Download Button -->
+        <a href="#" class="cv-btn">
+          <span class="download-icon">📥</span> Download Resume
+        </a>
+      </div>
     </section>
 
+    <section id="technical" class="card">
+    <h2>Electronics Projects & Lab Work</h2>
+    <div class="project-grid">
+
+        <div class="project">
+            <img src="assets/projects/detect.png" alt="Object Detection System" class="project-img" >
+            <div class="project-content">
+                <div class="project-top">
+                    <h3>Real-Time Object Detection System</h3>
+                    <div class="badges">
+                        <span class="badge shipped">Project</span>
+                        <a href="https://github.com/yeraldrom06/hackhounds-yolo-2026" target="_blank" class="btn">View GitHub Repo</a>
+                    </div>
+                </div>
+                <p>Engineered a real-time computer vision system using Ultralytics YOLO and a Raspberry Pi 3B+ for Loyola's Hackathon. Successfully integrated hardware sensors and Python software to process live visual data and estimate object distance.</p>
+                <div class="tags">
+                    <span>Raspberry Pi 3B+</span>
+                    <span>C/C++</span>
+                    <span>Sensors</span>
+                    <span>Computer Vision</span>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="project">
+           <img src="assets/projects/elvis.png" alt="Elvis III Lab" class="project-img" >
+            <div class="project-content">
+                <div class="project-top">
+                    <h3>Circuit & Signal Analysis Lab Work</h3>
+                    <div class="badges">
+                        <span class="badge shipped">Academic</span>
+                    </div>
+                </div>
+                <p>Validated theoretical engineering models through hands-on hardware testing. Designed and analyzed RC/RLC circuits using NI ELVIS III, and utilized oscilloscopes to capture complex voltage signals and determine transient and steady-state frequency responses.</p>
+                <div class="tags">
+                    <span>NI ELVIS III</span>
+                    <span>Oscilloscopes</span>
+                    <span>RC/RLC Circuits</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="assets/projects/desktop.png" alt="PC Assembly" class="project-img">
+            <div class="project-content">
+                <div class="project-top">
+                    <h3>Custom PC Assembly & Optimization</h3>
+                    <div class="badges">
+                        <span class="badge shipped">Project</span>
+                    </div>
+                </div>
+                <p>Built and tested multiple custom desktop PCs while working within strict budgets. Focused on choosing compatible parts, improving airflow and thermal performance, organizing cable management, and making sure each system ran smoothly.</p>
+                <div class="tags">
+                    <span>Hardware</span>
+                    <span>Thermals</span>
+                    <span>Performance Tuning</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="leadership" class="card">
+    <h2>Leadership & Involvement</h2>
+    <div class="project-grid">
+
+        <div class="project">
+            <img src="assets/projects/shelogo.png" alt="Society of Hispanic Engineers" class="project-img">
+            <div class="project-content">
+                <div class="project-top">
+                    <h3>Society of Hispanic Engineers | Co-Founder</h3>
+
+                    <div class="badges">
+                        <span class="badge shipped">Academic</span>
+                    </div>
+                </div>
+                <p>Co-founded and structured a new student organization from the ground up. Established the core mission and long-term strategic goals to provide underrepresented engineering students with vital career development, mentorship, and networking opportunities.</p>
+                <div class="tags">
+                    <span>Leadership</span>
+                    <span>Community Building</span>
+                    <span>Engineering</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="assets/projects/cyberhounds.png" alt="CyberHounds Loyola" class="projects-img">
+            <div class="project-content">
+                <div class="project-top">
+                    <h3>CyberHounds | Lead Web Developer</h3>
+                    <div class="badges">
+                        <span class="badge shipped">Academic</span>
+                        <a href="https://cybersecurity-club25.vercel.app/?utm_source=ig&utm_medium=social&utm_content=link_in_bio" target="_blank" class="btn">View Live Site</a>
+                    </div>
+                </div>
+                <p>Spearheading the front-end development and digital presence for Loyola’s cybersecurity club. Actively collaborating with club leadership to launch technical initiatives and drive student engagement through a modernized, responsive web platform.</p>
+                <div class="tags">
+                    <span>Web Development</span>
+                    <span>Cybersecurity</span>
+                    <span>Content Management</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="assets/projects/lsts.png" alt="Lets Share the Sun Logo" class="project-img" >
+            <div class="project-content">
+                <div class="project-top">
+                    <h3>Let's Share the Sun Initiative (LSTS)</h3>
+                    <div class="badges">
+                        <span class="badge shipped">Academic</span>
+                    </div>
+                </div>
+                <p>Supported sustainability and energy equity efforts through campus outreach, fundraising, and solar energy initiatives focused on expanding access to affordable solar systems in underserved communities.</p>
+                <div class="tags">
+                    <span>Renewable Energy</span>
+                    <span>Sustainability</span>
+                    <span>Outreach</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-content">
+                <div class="project-top">
+                    <h3>Loyola Career Ambassador & Resident Assistant</h3>
+                    <div class="badges">
+                        <span class="badge shipped">Academic</span>
+                    </div>
+                </div>
+                <p>Serving as a primary mentor and resource for 30+ residents while simultaneously acting as a Rizzo Career Ambassador. Dedicated to fostering a safe, inclusive campus environment and actively equipping students with professional development tools.</p>
+                <div class="tags">
+                    <span>Mentorship</span>
+                    <span>Public Speaking</span>
+                    <span>Event Planning</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+      <section id="skills" class="card">
+    <h2>Technical Skills</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 15px;">
+
+        <div>
+            <h3 style="color: var(--muted); font-size: 1rem; margin-bottom: 12px; font-weight: 500;">Languages & Software</h3>
+            <div class="tags">
+                <span>HTML / CSS</span>
+                <span>Python</span>
+                <span>Ultralytics YOLO</span>
+                <span>Web Development</span>
+            </div>
+        </div>
+
+        <div>
+            <h3 style="color: var(--muted); font-size: 1rem; margin-bottom: 12px; font-weight: 500;">Hardware & Tools</h3>
+            <div class="tags">
+                <span>Raspberry Pi </span>
+                <span>NI ELVIS III</span>
+                <span>Oscilloscopes</span>
+                <span>Arduino</span>
+            </div>
+        </div>
+
+        <div>
+            <h3 style="color: var(--muted); font-size: 1rem; margin-bottom: 12px; font-weight: 500;">Core Concepts</h3>
+            <div class="tags">
+                <span>Circuit Analysis (RC/RLC)</span>
+                <span>Digital Signal Processing</span>
+                <span>Embedded Systems</span>
+                <span>PC Assembly</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+    
+  </main>
+
+</body>
+</html>
     
 
   
