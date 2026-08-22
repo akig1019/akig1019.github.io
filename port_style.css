@@ -9,7 +9,7 @@ html {
   --text-secondary: #a3b8b0;  /* Subdued soft green-gray for body text */
   --accent-color: #ffffff;
   --card-bg-subtle: #053d29;  /* Marginally lighter green for hover/button boundaries */
-  --font-stack: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-stack: 'Calibri', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 * {
@@ -179,6 +179,48 @@ body {
 
 .cv-btn:hover {
   background-color: rgba(255, 255, 255, 0.15);
+}
+
+.btn {
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.05);
+  font-size: 0.9rem;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.10);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.tags span {
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.03);
+  font-size: 0.85rem;
+}
+.resume-actions {
+  margin-top: 12px;
+}
+
+.btn.primary {
+  border-color: rgba(147, 197, 253, 0.35);
+  background: rgba(147, 197, 253, 0.12);
+}
+
+.btn.primary:hover {
+  background: rgba(147, 197, 253, 0.18);
 }
 
 /* Interests & Education Bottom Grid */
