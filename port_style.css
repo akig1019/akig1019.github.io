@@ -10,10 +10,9 @@ html {
   --card: rgba(8, 47, 40, 0.75);
 
   --text: #f5f5f5;
-  --text-light: #f5f5f5;
   --muted: #b8d6cb;
 
-  --border: rgba(255, 255, 255, 0.08);
+  --border: rgba(255,255,255,0.08);
 
   --accent: #6ee7b7;
   --accent-hover: #34d399;
@@ -21,11 +20,6 @@ html {
 
 * {
   box-sizing: border-box;
-}
-
-html,
-body {
-  min-height: 100%;
 }
 
 body {
@@ -38,15 +32,15 @@ body {
 
   background-image:
     radial-gradient(circle at 20% 20%,
-      rgba(6, 95, 70, 0.8) 0%,
+      rgba(6,95,70,.8) 0%,
       transparent 45%),
 
     radial-gradient(circle at 80% 75%,
-      rgba(4, 120, 87, 0.75) 0%,
+      rgba(4,120,87,.75) 0%,
       transparent 50%),
 
     radial-gradient(circle at 50% 50%,
-      rgba(2, 44, 34, 1) 0%,
+      rgba(2,44,34,1) 0%,
       transparent 100%);
 
   background-size: 200% 200%;
@@ -67,9 +61,9 @@ body {
   }
 }
 
-/* --------------------
-   Layout
--------------------- */
+/* =====================================
+   MAIN CONTAINER
+===================================== */
 
 .container {
   max-width: 1100px;
@@ -77,75 +71,163 @@ body {
   padding: 0 20px 60px;
 }
 
+/* =====================================
+   HERO SECTION
+===================================== */
+
 .hero {
-  padding: 70px 20px 40px;
+  padding: 60px 20px 40px;
 }
 
 .hero-inner {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
 
-  padding: 32px;
+  padding: 40px;
 
-  border: 1px solid var(--border);
   border-radius: 20px;
 
   background: rgba(3, 44, 34, 0.75);
+
+  border: 1px solid var(--border);
+
   backdrop-filter: blur(12px);
 }
 
-.hero-grid {
+/* =====================================
+   PROFILE LAYOUT
+===================================== */
+
+.profile-layout {
   display: grid;
-  grid-template-columns: 160px 1fr;
-  gap: 28px;
-  align-items: center;
+
+  grid-template-columns: 280px 1fr;
+
+  gap: 60px;
+
+  align-items: start;
 }
 
-/* --------------------
-   Profile Photo
--------------------- */
+/* =====================================
+   PROFILE SIDEBAR
+===================================== */
+
+.profile-sidebar {
+  text-align: center;
+}
 
 .headshot {
-  width: 140px;
-  height: 140px;
+  width: 190px;
+  height: 190px;
 
-  border-radius: 50%;
   object-fit: cover;
+  border-radius: 50%;
 
-  border: 3px solid rgba(255,255,255,0.15);
+  margin-bottom: 20px;
+
+  border: 3px solid rgba(255,255,255,.15);
 
   box-shadow:
-    0 10px 25px rgba(0,0,0,.4);
+      0 15px 30px rgba(0,0,0,.4);
 }
 
-/* --------------------
-   Typography
--------------------- */
+.profile-sidebar h1 {
+  margin: 0 0 10px;
 
-h1 {
-  margin: 0 0 6px;
-  font-size: 3rem;
-  letter-spacing: -0.03em;
+  font-size: 2rem;
+  line-height: 1.15;
 }
 
-h2 {
+.title {
+  margin: 0;
+
+  font-size: 1.15rem;
+  font-weight: 600;
+
+  color: var(--text);
+}
+
+.school {
+  margin: 8px 0 24px;
+
+  color: var(--muted);
+
+  font-size: 1rem;
+}
+
+/* =====================================
+   SOCIAL LINKS
+===================================== */
+
+.social-links {
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+}
+
+.social-links a {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 14px;
+
+  border-radius: 10px;
+
+  border: 1px solid var(--border);
+
+  background: rgba(255,255,255,.04);
+
+  color: var(--accent);
+
+  text-decoration: none;
+
+  transition:
+      transform .2s ease,
+      background .2s ease;
+}
+
+.social-links a:hover {
+  transform: translateY(-2px);
+
+  background:
+      rgba(110,231,183,.15);
+}
+
+/* =====================================
+   ABOUT PANEL
+===================================== */
+
+.about-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-panel h2 {
+  margin-top: 0;
   margin-bottom: 20px;
-  font-size: 1.5rem;
-}
 
-.card h2 {
+  font-size: 1.8rem;
+
   position: relative;
-  padding-bottom: 10px;
+
+  padding-bottom: 12px;
 }
 
-.card h2::after {
+.about-panel h2::after {
   content: "";
 
   position: absolute;
+
   left: 0;
   bottom: 0;
 
-  width: 64px;
+  width: 70px;
   height: 3px;
 
   border-radius: 999px;
@@ -158,51 +240,78 @@ h2 {
     );
 }
 
-a {
-  color: var(--accent);
+.about-panel p {
+  margin-top: 0;
+
+  font-size: 1.1rem;
+  line-height: 1.9;
+
+  max-width: 900px;
 }
 
-/* --------------------
-   Navigation Buttons
--------------------- */
+/* =====================================
+   RESUME BUTTON
+===================================== */
 
-.links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 20px;
+.resume-actions {
+  margin-top: 24px;
 }
 
-.links a {
-  display: inline-block;
+.resume-actions .btn {
+  font-size: 1rem;
+}
 
-  padding: 10px 14px;
+/* =====================================
+   BUTTONS
+===================================== */
 
-  text-decoration: none;
-  color: var(--text);
+.btn {
+  display: inline-flex;
 
-  border-radius: 999px;
+  align-items: center;
+
+  padding: 12px 18px;
+
+  border-radius: 10px;
+
   border: 1px solid var(--border);
 
-  background: rgba(255,255,255,.04);
+  color: var(--text);
+
+  text-decoration: none;
+
+  background: rgba(255,255,255,.05);
+
+  font-weight: 600;
 
   transition:
-    background 0.2s ease,
-    transform 0.2s ease;
+      transform .2s ease,
+      background .2s ease;
 }
 
-.links a:hover {
+.btn:hover {
   transform: translateY(-2px);
 
-  background: rgba(110,231,183,.18);
-
-  box-shadow:
-    0 0 0 4px rgba(110,231,183,.08);
+  background:
+      rgba(255,255,255,.10);
 }
 
-/* --------------------
-   Generic Cards
--------------------- */
+.btn.primary {
+  border-color:
+      rgba(110,231,183,.35);
+
+  background:
+      rgba(110,231,183,.12);
+}
+
+.btn.primary:hover {
+  background:
+      rgba(110,231,183,.20);
+}
+
+/* =====================================
+   CONTENT CARDS
+===================================== */
 
 section {
   scroll-margin-top: 120px;
@@ -214,20 +323,53 @@ section {
   padding: 24px;
 
   border-radius: 16px;
+
   border: 1px solid var(--border);
 
-  background: rgba(4, 47, 46, 0.75);
+  background:
+      rgba(4,47,46,.75);
 
-  backdrop-filter: blur(12px);
+  backdrop-filter:
+      blur(12px);
 }
 
-/* --------------------
-   Projects
--------------------- */
+.card h2 {
+  margin-top: 0;
+
+  position: relative;
+
+  padding-bottom: 10px;
+}
+
+.card h2::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 60px;
+  height: 3px;
+
+  background:
+      linear-gradient(
+          to right,
+          #6ee7b7,
+          #34d399
+      );
+
+  border-radius: 999px;
+}
+
+/* =====================================
+   PROJECT GRID
+===================================== */
 
 .project-grid {
   display: flex;
   flex-direction: column;
+
   gap: 20px;
 }
 
@@ -236,132 +378,86 @@ section {
 
   border-radius: 16px;
 
-  background: rgba(3, 44, 34, 0.55);
+  background:
+      rgba(3,44,34,.55);
 
-  border: 1px solid rgba(255,255,255,0.06);
+  border:
+      1px solid rgba(255,255,255,.06);
 
   transition:
-    transform .2s ease,
-    box-shadow .2s ease,
-    border-color .2s ease;
+      transform .2s ease,
+      box-shadow .2s ease,
+      border-color .2s ease;
 }
 
 .project:hover {
-  transform: translateY(-5px);
+  transform:
+      translateY(-5px);
 
-  border-color: rgba(110,231,183,.35);
+  border-color:
+      rgba(110,231,183,.35);
 
   box-shadow:
-    0 20px 45px rgba(0,0,0,.45);
+      0 20px 45px rgba(0,0,0,.45);
 }
-
-/* --------------------
-   Project Images
--------------------- */
 
 .project-img {
   width: 100%;
   height: 280px;
 
   object-fit: cover;
-  object-position: center;
 
   border-radius: 14px;
 
   margin-bottom: 16px;
 
-  border: 1px solid rgba(255,255,255,.10);
+  border:
+      1px solid rgba(255,255,255,.10);
 
-  transition: transform .3s ease;
+  transition:
+      transform .3s ease;
 }
 
 .project:hover .project-img {
   transform: scale(1.02);
 }
 
-/* --------------------
-   Project Content
--------------------- */
-
 .project-content {
   display: flex;
   flex-direction: column;
+
   gap: 10px;
 }
 
 .project-top {
   display: flex;
+
   justify-content: space-between;
+
   align-items: flex-start;
 
-  gap: 12px;
   flex-wrap: wrap;
+
+  gap: 12px;
 }
 
 .project-top h3 {
   margin: 0;
 
   flex: 1 1 260px;
-  min-width: 260px;
 
   font-size: 1.25rem;
-  line-height: 1.25;
 }
 
 .project p {
   margin: 0;
+
   font-size: 1.05rem;
-  line-height: 1.65;
-
-  opacity: 0.95;
 }
 
-/* --------------------
-   Buttons
--------------------- */
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-
-  padding: 10px 14px;
-
-  border-radius: 10px;
-
-  border: 1px solid var(--border);
-
-  text-decoration: none;
-  color: var(--text);
-
-  background: rgba(255,255,255,.05);
-
-  font-weight: 600;
-  font-size: .9rem;
-
-  transition:
-    background .2s ease,
-    transform .2s ease;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-
-  background: rgba(255,255,255,.10);
-}
-
-.btn.primary {
-  border-color: rgba(110,231,183,.35);
-
-  background: rgba(110,231,183,.12);
-}
-
-.btn.primary:hover {
-  background: rgba(110,231,183,.18);
-}
-
-/* --------------------
-   Badges
--------------------- */
+/* =====================================
+   BADGES
+===================================== */
 
 .badges {
   display: flex;
@@ -372,27 +468,32 @@ section {
 .badge {
   padding: 6px 10px;
 
-  font-size: .8rem;
-
   border-radius: 999px;
 
-  border: 1px solid rgba(255,255,255,.12);
+  font-size: .8rem;
 
-  background: rgba(255,255,255,.05);
+  border:
+      1px solid rgba(255,255,255,.12);
+
+  background:
+      rgba(255,255,255,.05);
 }
 
 .badge.shipped {
-  background: rgba(110,231,183,.12);
+  background:
+      rgba(110,231,183,.12);
 
-  border-color: rgba(110,231,183,.35);
+  border-color:
+      rgba(110,231,183,.35);
 }
 
-/* --------------------
-   Technology Tags
--------------------- */
+/* =====================================
+   TAGS
+===================================== */
 
 .tags {
   display: flex;
+
   flex-wrap: wrap;
 
   gap: 8px;
@@ -407,71 +508,71 @@ section {
 
   border: 1px solid var(--border);
 
-  background: rgba(255,255,255,.03);
+  background:
+      rgba(255,255,255,.03);
 
   color: var(--muted);
 
   font-size: .9rem;
 }
 
-/* --------------------
-   Misc
--------------------- */
-
-.resume-actions {
-  margin-top: 12px;
-}
-
-.subtle {
-  opacity: .7;
-  font-size: .9rem;
-}
+/* =====================================
+   FOOTER
+===================================== */
 
 .footer {
-  margin-top: 30px;
+  margin-top: 40px;
 
   text-align: center;
 
   color: var(--muted);
 }
 
-/* --------------------
-   Mobile
--------------------- */
+/* =====================================
+   MOBILE
+===================================== */
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 
-  .hero-grid {
+  .profile-layout {
     grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .profile-sidebar {
     text-align: center;
   }
 
+  .about-panel {
+    text-align: left;
+  }
+
   .headshot {
-    margin: 0 auto;
+    width: 160px;
+    height: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .hero-inner {
+    padding: 24px;
   }
 
-  .links {
-    justify-content: center;
+  .profile-sidebar h1 {
+    font-size: 1.8rem;
   }
 
-  h1 {
-    font-size: 2.2rem;
-  }
-
-  .project-top {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .project-top h3 {
-    min-width: unset;
+  .about-panel p {
+    font-size: 1rem;
   }
 
   .project-img {
     height: 220px;
   }
 
-  .card {
-    padding: 18px;
+  .project-top {
+    flex-direction: column;
   }
 }
